@@ -1,6 +1,8 @@
 #
 # Author: Wayne E. Seguin <wayneeseguin@gmail.com>
 #
+# NOTE: This code will only execute on Linux/OSX not Windows as it uses 
+# the `grep` and `head` CLI system tools
 
 # Download Data File Archive
 fileName <- "household_power_consumption.zip"
