@@ -21,6 +21,7 @@ system("(head -1 household_power_consumption.txt ; grep '^[1|2]/2/2007' househol
 # Read in the data set
 df <- read.csv("hpc.csv", header=TRUE, sep=';', na.strings='?')
 
+# Compute the timestamp field
 df$datetime <- strptime(paste(df$Date,df$Time), "%d/%m/%Y %H:%M")
 
 # Plot the Data!

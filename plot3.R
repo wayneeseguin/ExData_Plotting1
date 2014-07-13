@@ -22,14 +22,14 @@ system("(head -1 household_power_consumption.txt ; grep '^[1|2]/2/2007' househol
 df <- read.csv("hpc.csv", header=TRUE, sep=';', na.strings='?')
 
 # Compute timestamp field
-df$Timestamp <- strptime(paste(df$Date,df$Time), "%d/%m/%Y %H:%M")
+df$datetime <- strptime(paste(df$Date,df$Time), "%d/%m/%Y %H:%M")
 
 # Plot the Data!
 png("plot3.png",width=480,height=480,units="px",bg="transparent")
 
 message("Energy Sub Metering Plot")
 plot(
-	df$Timestamp,
+	df$datetime,
 	df$Sub_metering_1,
 	xlab ="",
 	ylab = "Energy sub metering",
@@ -38,13 +38,13 @@ plot(
 )
 
 lines(
-	df$Timestamp,
+	df$datetime,
 	df$Sub_metering_2,
 	col = "red"
 )
 
 lines(
-	df$Timestamp,
+	df$datetime,
 	df$Sub_metering_3,
 	col = "blue"
 )
