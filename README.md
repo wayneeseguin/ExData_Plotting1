@@ -122,7 +122,7 @@ The four plots that you will need to construct are shown below.
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
-#### My PLot 4
+#### My Plot 4
 
 ![My plot4.png](plot4.png) 
 
