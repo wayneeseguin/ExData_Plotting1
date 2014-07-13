@@ -28,12 +28,33 @@ df$Timestamp <- strptime(paste(df$Date,df$Time), "%d/%m/%Y %H:%M")
 png("plot3.png",width=480,height=480,units="px",bg="transparent")
 
 message("Energy Sub Metering Plot")
-plot(df$Timestamp, df$Sub_metering_1,xlab ="", ylab = "Energy sub metering", type ="l",col = 'black')
+plot(
+	df$Timestamp,
+	df$Sub_metering_1,
+	xlab ="",
+	ylab = "Energy sub metering",
+	type ="l",
+	col = 'black'
+)
 
-lines(df$Timestamp, df$Sub_metering_2, col = "red")
+lines(
+	df$Timestamp,
+	df$Sub_metering_2,
+	col = "red"
+)
 
-lines(df$Timestamp, df$Sub_metering_3, col = "blue")
+lines(
+	df$Timestamp,
+	df$Sub_metering_3,
+	col = "blue"
+)
 
-legend('topright', c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c('black','red','blue'), lty = 1, lwd = 3)
+legend(
+	'topright',
+	c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), 
+	col = c('black','red','blue'), 
+	lty = 1, 
+	lwd = 3
+)
 
 dev.off() # Close the PNG device!

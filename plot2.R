@@ -27,5 +27,11 @@ df <- read.csv("hpc.csv", header=TRUE, sep=';', na.strings='?')
 # Plot the Data!
 png("plot2.png",width=480,height=480,units="px",bg="transparent")
 message("Global Active Power Plot")
-plot(df$Timestamp,df$Global_active_power, xlab="",ylab="Global Active Power (kilowatts)", type="l")
+plot(
+	df$Timestamp,
+	df$Global_active_power,
+	xlab="",
+	ylab="Global Active Power (kilowatts)",
+	type="l"
+)
 dev.off() # Close the PNG device!
